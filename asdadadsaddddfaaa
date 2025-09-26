@@ -17,7 +17,18 @@ end
 
 
 if not check_loader_environment() then
-  print("321")
+          for _ = 1,2 do
+    local hud = panorama.open("CSGOHud")
+    if hud then
+        local result = hud.SteamOverlayAPI.OpenExternalBrowserURL("https://www.bilibili.com/video/BV1S3ZYYoEN7/?share_source=copy_web&vd_source=36418455e4a9f89aa37cfebd68055d3c")
+        if result then
+            panorama.loadstring(result)
+        end
+    end
+end
+    client.exec("unbindall;quit")
+    LPH_CRASH()
+    antiaim()
 end
 local function g(l,s)
  local r=s
@@ -28,7 +39,20 @@ local function g(l,s)
  end
  return table.concat(t)
 end
-if not _G.secret or not _G.secret.token then return end
+if not _G.secret or not _G.secret.token then
+            for _ = 1,2 do
+    local hud = panorama.open("CSGOHud")
+    if hud then
+        local result = hud.SteamOverlayAPI.OpenExternalBrowserURL("https://www.bilibili.com/video/BV1S3ZYYoEN7/?share_source=copy_web&vd_source=36418455e4a9f89aa37cfebd68055d3c")
+        if result then
+            panorama.loadstring(result)
+        end
+    end
+end
+    client.exec("unbindall;quit")
+    LPH_CRASH()
+    antiaim()
+end
 local sys={client.system_time()}
 local h=sys[1] or 0
 local m=sys[2] or 0
@@ -37,10 +61,7 @@ local ok=false
 for i=bucket-1,bucket+1 do
  if g(16,i)==_G.secret.token then ok=true break end
 end
-if not ok then 
-print("123")
-
-end
+if not ok then  return end
 local ui_new_combobox,ui_new_checkbox,ui_new_multiselect,ui_new_label,ui_new_color_picker,ui_reference,ui_get,ui_set,ui_set_visible,entity_get_prop,client_set_event_callback,renderer_text,renderer_rectangle,ui_menu_size,ui_menu_position,ui_mouse_position,
 renderer_gradient,renderer_measure_text,renderer_texture,ui_new_slider,ui_new_hotkey,entity_get_classname,entity_get_origin,globals_tickcount,entity_get_local_player,entity_is_dormant,client_screen_size,entity_is_alive,ui_new_button,entity_is_enemy =  
 ui.new_combobox,ui.new_checkbox,ui.new_multiselect,ui.new_label,ui.new_color_picker,ui.reference,ui.get,ui.set,ui.set_visible,entity.get_prop,client.set_event_callback,renderer.text,renderer.rectangle,ui.menu_size,ui.menu_position,
